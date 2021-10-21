@@ -38,5 +38,5 @@ Esta herramienta beneficiaría tanto a un jugador del cual se conocen los datos,
 
 En esta sección se muestra documentación adicional al proyecto que ha sido relevante para el desarrollo del mismo:
 
-1. [Configuración de git](Documentacion/Configuracion-Git.md)
-2. [Licencia](LICENSE)
+1. [Configuración de git](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Configuracion-Git.md)
+2. [Licencia](https://github.com/vntr-CC/Forward-Football/blob/main/LICENSE)
