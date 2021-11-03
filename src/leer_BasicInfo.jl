@@ -11,7 +11,7 @@ struct BasicInfo
     team_info::DataFrame
 end
 
-function leer_BasicInfo(path)
+function leer_BasicInfo(path::String)
     # Leemos fichero
     xf = XLSX.readxlsx(path)
     sps_names = XLSX.sheetnames(xf)
