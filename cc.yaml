@@ -1,3 +1,4 @@
 entidad: src/leer_BasicInfo.py
 entidad: src/leer_TrainInfo.py
-entidad: src/leer_ExtendedInfo.py
+entidad: src/leer_BasicInfo.jl
+entidad: src/leer_TrainInfo.jl
