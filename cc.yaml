@@ -1,4 +1,7 @@
-entidad: src/leer_BasicInfo.py
-entidad: src/leer_TrainInfo.py
-entidad: src/leer_BasicInfo.jl
-entidad: src/leer_TrainInfo.jl
+entidad:
+  - src/leer_BasicInfo.jl
+lenguaje: julia
+test:
+  - tests/lectura_tests.jl
+fichero_tareas:
+  - unknown
