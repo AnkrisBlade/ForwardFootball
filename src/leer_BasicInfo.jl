@@ -3,7 +3,7 @@ using Pkg; Pkg.activate("."); Pkg.instantiate()
 
 using DataFrames, XLSX
 
-# Definimos un nuevo tipo de Dato
+# Definimos la estructura de BasicInfo
 struct BasicInfo
     match_id::String
     basic_info::DataFrame
