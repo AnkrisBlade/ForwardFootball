@@ -1,7 +1,9 @@
 entidad:
   - src/leer_BasicInfo.jl
+  - src/leer_TrainInfo.jl
+  - src/ForwardFootball.jl
 lenguaje: julia
 test:
-  - tests/lectura_tests.jl
+  - test/runtests.jl
 fichero_tareas:
-  - tests/tareas.jl
+  - .travis.yml
