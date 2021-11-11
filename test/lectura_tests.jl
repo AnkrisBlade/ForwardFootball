@@ -1,8 +1,7 @@
-include("../src/LeerDatos.jl")
-
-using .LeerDatos: leer_BasicInfo, leer_TrainInfo
+using ForwardFootball
 using Test
 
+## Conjunto de Tests sobre lectura
 
 @testset "Lectura de Datos Básicos" begin
     path = "../src/Data/Info_Basica/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
