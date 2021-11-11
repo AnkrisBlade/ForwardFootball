@@ -1,0 +1,18 @@
+name = "ForwardFootball"
+uuid = "f7f4ca67-479b-4e00-9531-43616d7a8a9d"
+authors = ["“Ventura Lastrucci” <“ventura.cc.21.22@gmail.com”>"]
+version = "0.1.0"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
+
+[compat]
+julia = "^1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
+
+[targets]
+test = ["Test", "SafeTestsets"]
