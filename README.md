@@ -6,7 +6,7 @@
 ![Lifecycle](https://img.shields.io/badge/lifecycle-retired-orange.svg)
 ![Lifecycle](https://img.shields.io/badge/lifecycle-archived-red.svg)
 ![Lifecycle](https://img.shields.io/badge/lifecycle-dormant-blue.svg) -->
-[![Build Status](https://app.travis-ci.com/vntr-CC/ForwardFootball.svg?branch=main)](https://app.travis-ci.com/vntr-CC/ForwardFootball.jl)
+[![Build Status](https://app.travis-ci.com/vntr-CC/ForwardFootball.svg?branch=main)](https://app.travis-ci.com/github/vntr-CC/ForwardFootball)
 
 Este proyecto consiste en el desarrollo de una aplicación que sea capaz de satisfacer las necesidades de los diferentes usuarios expuestos en el [Hito 1](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-1.md).
 
