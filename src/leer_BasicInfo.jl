@@ -1,6 +1,3 @@
-cd(@__DIR__)
-using Pkg; Pkg.activate("."); Pkg.instantiate()
-
 using DataFrames, XLSX
 
 # Definimos la estructura de BasicInfo
