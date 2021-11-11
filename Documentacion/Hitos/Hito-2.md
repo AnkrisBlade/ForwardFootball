@@ -1,15 +1,3 @@
-# ForwardFootball.jl
-
-![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)<!--
-![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-retired-orange.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-archived-red.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-dormant-blue.svg) -->
-[![Build Status](https://app.travis-ci.com/vntr-CC/ForwardFootball.svg?branch=main)](https://app.travis-ci.com/vntr-CC/ForwardFootball.jl)
-
-Este proyecto consiste en el desarrollo de una aplicación que sea capaz de satisfacer las necesidades de los diferentes usuarios expuestos en el [Hito 1](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-1.md).
-
 ## Hito 2
 
 Una vez conocido el proyecto a realizar (ver [Hito 0](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-0.md)), y conocido los diferentes roles, los escenarios, las primeras historias de usuario y los primeros milestones (ver [Hito 1](https://github.com/vntr-CC/ForwardFootball/blob/main/Documentacion/Hitos/Hito-1.md)), es momento de definir el gestor de tareas que emplearemos e implementar los diferentes tests que van a cubrir el código del sistema.
@@ -56,10 +44,3 @@ Una vez instalado, somos capaces de testearlo dentro del mismo REPL de la siguie
 A la hora de implementar los tests, haremos uso de la metodología TDD para comprobar el funcionamiento general del código, y haremos uso de la metodología BDD para comprobar el comportamiento indicado por las historias de usuario.
 
 Para comprobar cuántas funcionalidades de nuestro proyecto están cubiertos por los tests, podemos hacer uso de [Coveralls](https://coveralls.io/) o [Codecov](https://about.codecov.io/).
-
-## Anteriores Hitos
-
-La documentación relacionada con hitos anteriores se podrá consultar a través de los siguientes enlaces:
-
-* [Hito 0](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-0.md)
-* [Hito 1](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-1.md)
