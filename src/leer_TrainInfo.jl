@@ -11,6 +11,7 @@ struct TrainInfo
     train_bpm::Vector{DataFrame}
 end
 
+# Funcion de lectura del fichero TrainInfo
 function leer_TrainInfo(path::String)
     # Leemos fichero
     xf = XLSX.readxlsx(path)

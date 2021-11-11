@@ -8,6 +8,7 @@ struct BasicInfo
     team_info::DataFrame
 end
 
+# Funcion de lectura del fichero BasicInfo
 function leer_BasicInfo(path::String)
     # Leemos fichero
     xf = XLSX.readxlsx(path)
