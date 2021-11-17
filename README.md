@@ -26,15 +26,17 @@ Un [gestor de tareas o herramienta de construcción](https://jj.github.io/curso-
 
 > Permite usar, como subcomandos de un solo programa y especificados en un solo fichero, todas las tareas que se tienen que llevar a cabo con una aplicación, desde su compilación hasta la generación de la documentación pasando por todo lo necesario para ejecutar todo tipo de tests y desplegarlo.
 
-Para realizar esta cometido en el lenguaje de programación Julia haremos uso del servicio de Integración Contínua de **Travis CI**. Donde primeramente comprobará la integración del proyecto ejecutando los tests y posteriormente inicializará los pasos necesarios para su compilación y generación de la documentación.
+Comentar que al desarrollar el proyecto puramente en Julia, la necesidad de un archivo `make.jl` desaparece, gracias al archivo del proyecto `Project.toml`, que describe el proyecto a un nivel alto conteniendo por ejemplo, las dependencias de los diferentes paquetes o las restricciones de compatibilidad. También en él se definen diferentes campos que nos permiten diferenciar los paquetes que necesitamos en las diferentes fases de compilación. En nuestro caso, al utilizar dos librerías para los tests, definiendo sus dependencias bajo el campo `extras`, nos aseguramos que estas librerías solo se instalarán en el proceso de testeo del proyecto.
+
+Pero para satisfacer este punto de la rúbrica se ha implementado un archivo `make.jl` que mediante subcomandos de Julia realiza la compilación e instalación de las dependencias dentro de un ecosistema y que posteriormente ejecuta los tests definidos.
+
+Adicionalmente también haremos uso del servicio de Integración Continua de **Travis CI**. Donde primeramente comprobará la integración del proyecto ejecutando los tests y posteriormente inicializará los pasos necesarios para su compilación y generación de la documentación.
 Para ver otras opciones haga clic [aquí](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/gestor-tareas.md).
 
 <a name="aserciones"></a>
 ### 📚 Biblioteca de Aserciones 📚
 
 Julia está en rápido desarrollo y tiene un extenso conjunto de pruebas para verificar la funcionalidad en múltiples plataformas. En este caso haremos uso del módulo **Test** en conjunto con **SafeTestsets** para la definición de los diferentes tests que cubren los múltiples aspectos de la lógica de negocio. Para ver otras opciones haga clic [aquí](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/biblioteca-aserciones.md)
-
-Comentar que al desarrollar el proyecto puramente en Julia, la necesidad de un archivo `build.jl` desaparece. Gracias al archivo del proyecto `Project.toml` que describe el proyecto a un nivel alto, conteniendo por ejemplo, las dependencias de los diferentes paquetes o las restricciones de compatibilidad. También en él se definen diferentes campos que nos permiten diferenciar los paquetes que necesitamos en las diferentes fases de compilación. En nuestro caso, al utilizar dos librerrías para los tests, definiendo sus dependencias bajo el campo `extras`, nos aseguramos que estas librerías solo se instalarán en el proceso de testeo del proyecto.
 
 <a name="pruebas"></a>
 ### ✅ Marco de Pruebas ❎

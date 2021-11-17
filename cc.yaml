@@ -6,4 +6,4 @@ lenguaje: julia
 test:
   - test/runtests.jl
 fichero_tareas:
-  - .travis.yml
+  - make.jl
