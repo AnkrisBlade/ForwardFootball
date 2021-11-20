@@ -1,6 +1,6 @@
 ## Hito 1
 
-Una vez conocido el proyecto a realizar (ver [Hito 0](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-0.md)), se procederá a definir lo siguiente:
+Una vez conocido el proyecto a realizar (ver [Hito 0](./Hito-0.md)), se procederá a definir lo siguiente:
 
 
 * [Roles](#roles)
@@ -55,6 +55,8 @@ A partir de estas historias de usuario, se crean las primeras tareas o issues:
 * [Se necesita poder comparar el rendimiento de un jugador durante un partido con el de otro](https://github.com/vntr-CC/Forward-Football/issues/11)
 * [Se necesita poder comparar el rendimiento de un jugador durante un entrenamiento con el de otro](https://github.com/vntr-CC/Forward-Football/issues/13)
 
+Para observar todos los issues añadidos posteriormente pulsar [aquí](https://github.com/vntr-CC/ForwardFootball/issues).
+
 <a name="milestones"></a>
 ### Milestones
 
@@ -64,10 +66,6 @@ Las historias de usuario y sus respectivas tareas será agrupadas en los siguien
 * [PMV 2 - Se habilita la obtención del rendimiento de un jugador durante un entrenamiento](https://github.com/vntr-CC/Forward-Football/milestone/3)
 * [PMV 3 - Se habilita la capacidad de comparar el rendimiento de los jugadores](https://github.com/vntr-CC/Forward-Football/milestone/4)
 
+Para observar todos los milestomes añadidos posteriormente pulsar [aquí](https://github.com/vntr-CC/ForwardFootball/milestones).
 
 Dicho rendimiento viene definido por el tiempo entrenado, la frecuencia cardíaca por minuto, el cansancio físico, las calorías consumidas, la velocidad máxima lograda y la distancia cubierta.
-## Anteriores Hitos
-
-La documentación relacionada con hitos anteriores se podrá consultar a través de los siguientes enlaces:
-
-* [Hito 0](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-0.md)

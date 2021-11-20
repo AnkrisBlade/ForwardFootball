@@ -8,60 +8,50 @@
 ![Lifecycle](https://img.shields.io/badge/lifecycle-dormant-blue.svg) -->
 [![Build Status](https://app.travis-ci.com/vntr-CC/ForwardFootball.svg?branch=main)](https://app.travis-ci.com/github/vntr-CC/ForwardFootball)
 
-Este proyecto consiste en el desarrollo de una aplicación que sea capaz de satisfacer las necesidades de los diferentes usuarios expuestos en el [Hito 1](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-1.md).
+Este proyecto consiste en el desarrollo de una aplicación que sea capaz de satisfacer las necesidades de los diferentes usuarios expuestos en el [Hito 1](./Documentacion/Hitos/Hito-1.md).
 
-## Hito 2
+## Hito 3
 
-Una vez conocido el proyecto a realizar (ver [Hito 0](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-0.md)), y conocido los diferentes roles, los escenarios, las primeras historias de usuario y los primeros milestones (ver [Hito 1](https://github.com/vntr-CC/ForwardFootball/blob/main/Documentacion/Hitos/Hito-1.md)), es momento de definir el gestor de tareas que emplearemos e implementar los diferentes tests que van a cubrir el código del sistema.
+Una vez conocido el proyecto a realizar (ver [Hito 0](./Documentacion/Hitos/Hito-0.md)), conocido los diferentes roles, los escenarios, las primeras historias de usuario y los primeros milestones (ver [Hito 1](./Documentacion/Hitos/Hito-1.md)), e implementado el gestor de tareas y los tests (ver [Hito 2](./Documentacion/Hitos/Hito-2.md)), es momento de definir el contenedor que va a permitir desplegar el proyecto en cualquier tipo de aplicación.
 
 
-* [Gestor de Tareas](#tareas)
-* [Biblioteca de Aserciones](#aserciones)
-* [Marco de Pruebas](#pruebas)
-* [Metodología de diseño software](#metodologia)
+* [Contenedor Base](#contenedor)
+* [Docker Hub](#docker)
+* [GitHub Container Registry](#gitcontainer)
 
-<a name="tareas"></a>
-### Gestor de Tareas 📓
-Un [gestor de tareas o herramienta de construcción](https://jj.github.io/curso-tdd/temas/gestores-tareas.html):
+<a name="contenedor"></a>
+### Contenedor Base
 
-> Permite usar, como subcomandos de un solo programa y especificados en un solo fichero, todas las tareas que se tienen que llevar a cabo con una aplicación, desde su compilación hasta la generación de la documentación pasando por todo lo necesario para ejecutar todo tipo de tests y desplegarlo.
-
-Comentar que al desarrollar el proyecto puramente en Julia, la necesidad de un archivo `make.jl` desaparece, gracias al archivo del proyecto `Project.toml`, que describe el proyecto a un nivel alto conteniendo por ejemplo, las dependencias de los diferentes paquetes o las restricciones de compatibilidad. También en él se definen diferentes campos que nos permiten diferenciar los paquetes que necesitamos en las diferentes fases de compilación. En nuestro caso, al utilizar dos librerías para los tests, definiendo sus dependencias bajo el campo `extras`, nos aseguramos que estas librerías solo se instalarán en el proceso de testeo del proyecto.
-
-Pero para satisfacer este punto de la rúbrica se ha implementado un archivo `make.jl` que mediante subcomandos de Julia realiza la compilación e instalación de las dependencias dentro de un ecosistema y que posteriormente ejecuta los tests definidos.
-
-Adicionalmente también haremos uso del servicio de Integración Continua de **Travis CI**. Donde primeramente comprobará la integración del proyecto ejecutando los tests y posteriormente inicializará los pasos necesarios para su compilación y generación de la documentación.
-Para ver otras opciones haga clic [aquí](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/gestor-tareas.md).
-
-<a name="aserciones"></a>
-### 📚 Biblioteca de Aserciones 📚
-
-Julia está en rápido desarrollo y tiene un extenso conjunto de pruebas para verificar la funcionalidad en múltiples plataformas. En este caso haremos uso del módulo **Test** en conjunto con **SafeTestsets** para la definición de los diferentes tests que cubren los múltiples aspectos de la lógica de negocio. Para ver otras opciones haga clic [aquí](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/biblioteca-aserciones.md)
-
-<a name="pruebas"></a>
-### ✅ Marco de Pruebas ❎
-Para utilizar y lanzar los tests en Julia, solo necesitamos tener Julia instalado y añadir el proyecto como paquete a un ecosistema de nuestra elección. Nosotros lo instalaremos en el que se crea por defecto, pero aconsejamos que si se va a descargar software de terceros se inicialice en un ecosistema diferente en caso de causar fallos de dependencias que podría haber con otros paquetes que tuviera ya instalados. Los pasos son los siguientes:
-
-Una vez abierto el REPL de Julia, presionamos `]`, en el teclado español se realiza mediante `AltGr + ]`, para entrar en el REPL del administrador de paquetes (para retornar presionar la tecla `Delete`). Luego indicamos el paquete a añadir que en nuestro caso es la dirección de este repositorio:
-
-```julia-repl
-(@v1.6) pkg> add https://github.com/vntr-CC/ForwardFootball.git
+El contenedor base empleado para el despliegue del proyecto ha sido el siguiente:
+```Dockerfile
+FROM julia:1.6
 ```
-Una vez instalado, somos capaces de testearlo dentro del mismo REPL de la siguiente manera:
-```julia-repl
-(@v1.6) pkg> test PerformFootball
-```
+Para más información acerca del estudio realizado sobre otras opciones clicar [aquí](./Documentacion/extra/contenedor-base.md).
 
-<a name="metodologia"></a>
-### 📝 Metodología de diseño software 📝
+<a name="docker"></a>
+### Docker Hub
 
-A la hora de implementar los tests, haremos uso de la metodología TDD para comprobar el funcionamiento general del código, y haremos uso de la metodología BDD para comprobar el comportamiento indicado por las historias de usuario.
+Se ha empleado para el almacenamiento del contenedor creado, permitiendo su descarga y despliegue en cualquier otra aplicación. 
 
-Para comprobar cuántas funcionalidades de nuestro proyecto están cubiertos por los tests, podemos hacer uso de [Coveralls](https://coveralls.io/) o [Codecov](https://about.codecov.io/).
+Siguiendo la estructura establecida por la [documentación de GitHub](https://docs.github.com/es/actions/publishing-packages/publishing-docker-images),
+hemos definido el workflow `push-docker&Git.yml` que se encargará de actualizar y publicar de manera automática en cada push a la rama principal `main` la imagen, tanto en Docker Hub como en el Registro del paquete de Github.  
+
+<a name="gitcontainer"></a>
+### GitHub Container Registry
+
+El Registro del paquete de GitHub nos permite alojar y administrar nuestras imágenes de contenedores de Docker en GitHub. Uno de los beneficios es que se podemos definir permisos para la imagen de Docker independientemente de los de cualquier repositorio. Esto quiere decir que nuestro repositorio podría ser privado y la imagen de Docker pública.
+
+Como hemos descrito en el apartado anterior, hemos definido el workflow de la publicación de la imágen en GitHub Container Registry junto con su publicación en Docker Hub.
+
+Para acceder a dicho archivo clicar [aquí](./.github/workflows/push-docker&Git.yml).
+
+Para más información acerca de diferentes registros públicos de contenedores clicar [aquí](./Documentacion/extra/registros-alternativos.md). 
 
 ## Anteriores Hitos
 
 La documentación relacionada con hitos anteriores se podrá consultar a través de los siguientes enlaces:
 
-* [Hito 0](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-0.md)
-* [Hito 1](https://github.com/vntr-CC/Forward-Football/blob/main/Documentacion/Hitos/Hito-1.md)
+* [Hito 0](./Documentacion/Hitos/Hito-0.md)
+* [Hito 1](./Documentacion/Hitos/Hito-1.md)
+* [Hito 2](./Documentacion/Hitos/Hito-2.md)
+* [Hito 3](./Documentacion/Hitos/Hito-3.md)
