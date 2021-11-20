@@ -8,7 +8,7 @@ name: ForwardFootball Image
 on:
   push:
     branches:
-      - master
+      - main
 
 
 jobs:
