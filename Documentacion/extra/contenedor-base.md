@@ -17,7 +17,7 @@ FROM julia:1.6
 ```
 
 ### julia:<'version'>-alpine
-Esta imagen está basada en el sistema operativo Alpine visto en el apartado anterior. Alpine Linux tiene un tamaño menor que la mayoría de contenedores base (~5MB), creando así imagenes de un tamaño más reducido. Esta variante es útil cuando el tamaño de la imagen es una parte importante en su diseño, pero al usar [musl libc](https://musl.libc.org/) en vez de [glibc](https://es.wikipedia.org/wiki/Glibc), es posible que el software encuentre problemas. De hecho podemos observar que al intentar compilar las dependencias encontramos fallos con el paquete `XLSX`: 
+Esta imagen está basada en el sistema operativo Alpine visto en el apartado anterior. Alpine Linux tiene un tamaño menor que la mayoría de contenedores base (~5MB), creando así imagenes de un tamaño más reducido. Esta variante es útil cuando el tamaño de la imagen es una parte importante en su diseño, pero al usar [musl libc](https://musl.libc.org/) en vez de [glibc](https://es.wikipedia.org/wiki/Glibc), es posible que el software encuentre problemas. De hecho podemos observar que al intentar compilar las dependencias encontramos fallos con el paquete `XLSX`:
 ![Error XLSX](../Imagenes/error-XLSX.png)
 
 Para solucionar este problema podemos proponer el cambio de formato de los ficheros de datos, de manera que se pueda prescindir de este paquete.
@@ -31,14 +31,17 @@ Esta es la imagen de facto. Al no ser un experto en docker el hacer uso de esta 
 Las características a destacar son:
 
 * El númeor de capas:
+
     ![Capas del contenedor](../Imagenes/layers-container.png)
 
 * El espacio que ocupa:
+
     ![Tamaño del contenedor](../Imagenes/size-container.png)
 
 * Ejecución:
+
     ![Ejecución del contenedor](../Imagenes/run-container.png)
-    
+
     ...
 
     ![Ejecución del contenedor](../Imagenes/run2-container.png)
