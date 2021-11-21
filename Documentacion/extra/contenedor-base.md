@@ -23,14 +23,14 @@ Esta imagen está basada en el sistema operativo Alpine visto en el apartado ant
 Para solucionar este problema podemos proponer el cambio de formato de los ficheros de datos, de manera que se pueda prescindir de este paquete.
 
 ### julia:<'version'>-windowsservercore
-Esta imagen esta basada en Windows Server Core, por lo que solo funciona en sistemas operativos como Windows 10 Professional/Enterprise (Anniversary Edition) o en Windows Server 2016. Al hacer uso de ubuntu como sistema operativo principal en el desarrollo de este proyecto, no considero de relevancia continuar en esta líneea.
+Esta imagen esta basada en Windows Server Core, por lo que solo funciona en sistemas operativos como Windows 10 Professional/Enterprise (Anniversary Edition) o en Windows Server 2016. Al hacer uso de ubuntu como sistema operativo principal en el desarrollo de este proyecto, no considero de relevancia continuar en esta línea.
 
 ### jullia:<'version'>
-Esta es la imagen de facto. Al no ser un experto en docker el hacer uso de esta imagne parece ser lo indicado. Esta imagen está diseñada para usarse tanto como un contenedor desechable, así como la base para construir otras imágenes.
+Esta es la imagen de facto. Al no ser un experto en docker, el hacer uso de esta imagen parece ser lo indicado. Esta imagen está diseñada para usarse tanto como un contenedor desechable, así como de base para construir otras imágenes.
 
 Las características a destacar son:
 
-* El númeor de capas:
+* El número de capas:
 
     ![Capas del contenedor](../Imagenes/layers-container.png)
 
@@ -38,7 +38,7 @@ Las características a destacar son:
 
     ![Tamaño del contenedor](../Imagenes/size-container.png)
 
-* Ejecución:
+* Su ejecución:
 
     ![Ejecución del contenedor](../Imagenes/run-container.png)
 
