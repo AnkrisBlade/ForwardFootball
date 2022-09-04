@@ -8,50 +8,59 @@
 ![Lifecycle](https://img.shields.io/badge/lifecycle-dormant-blue.svg) -->
 [![Build Status](https://app.travis-ci.com/vntr-CC/ForwardFootball.svg?branch=main)](https://app.travis-ci.com/github/vntr-CC/ForwardFootball)
 
-Este proyecto consiste en el desarrollo de una aplicación que sea capaz de satisfacer las necesidades de los diferentes usuarios expuestos en el [Hito 1](./Documentacion/Hitos/Hito-1.md).
+Sistema de análisis del rendimiento de jugadores de fútbol en base a distintas métricas.
 
-## Hito 3
+***
 
-Una vez conocido el proyecto a realizar (ver [Hito 0](./Documentacion/Hitos/Hito-0.md)), conocido los diferentes roles, los escenarios, las primeras historias de usuario y los primeros milestones (ver [Hito 1](./Documentacion/Hitos/Hito-1.md)), e implementado el gestor de tareas y los tests (ver [Hito 2](./Documentacion/Hitos/Hito-2.md)), es momento de definir el contenedor que va a permitir desplegar el proyecto en cualquier tipo de aplicación.
+![ForwardFooball](docs/imgs/forward_football.png)
+
+## Descripción del problema
+
+La competitividad en los deportes hace que los diferentes clubes busquen las mejores herramientas para realizar las modificaciones pertienentes en los múltiples aspectos dentro de su juego. Gracias a diferentes sensores son capaces de generar grandes cantidades de datos referentes a cada una de las diferentes características que pueden encontrarse en su campo. Forward Football se centra en concreto en el deporte del fútbol. Las diferentes características que son analizadas varían entre las condiciones físicas de cada jugador hasta la posición de la pelota en un partido. El diseño de una aplicación web capaz de analizar estas grandes cantidades de datos con el objetivo de realizar cientos de cálculos para mejorar la comprensión acerca de los mejores cambios a realizar en la estrategia de juego y de entrenamiento es fundamental. Asimismo el diseño de otra herramienta capaz de predecir en función de los calculos realizados qué jugadores están en las mejores condiciones para el próximo partido, resulta de gran interés.
+
+### Solución propuesta
+
+Para dar una solución a estas necesidades se propone una aplicación web en la que tanto jugadores como entrenadores como managers puedan consultar los diferentes parámetros y obtener los cálculos de mayor interés, al igual que diferentes gráficos que permitan una mejor comprensión a la hora de estudiar diferentes aspectos como el movimiento de la pelota o del jugador durante el partido. Los datos disponibles vienen presentados en forma de excel,
+teniendo que realizar su limpieza y transformaciones pertinenetes para su almacenamiento en una base de datos que tendrá que ser diseñada. Posteriormente se habilitará una aplicación web que haga uso de estos datos para su presentación a los diferentes usuarios.
+
+El lenguaje de programación pensado para la esta resolución es el llamado Julia, aunque en caso de encontrar dificultades en el desarollo el lenguaje empleado será Python.
+
+### ¿A quién beneficia?
+
+Esta herramienta beneficiaría tanto a un jugador del cual se conocen los datos, como a un entrenador de un equipo, como al manager de un club. Pero de manera más general beneficiaría a la industria del fútbol ya que esto supone una mejora inigualable a las técnicas realizadas previas a la incorporación de la metodología del Big Data.
+
+***
+
+## Creación y configuración del repositorio
+- [Enlace](docs/hitos/Hito_0.md) referente a la problemática a resolver, y la configuración del repositorio.
+
+***
+
+## Planificación del proyecto
+- Enlace para acceder a la planificación inicial del proyecto, las _historias de usuario_ que describen los roles descritos en el [Hito 1](docs/hitos/Hito_1.md) la creación de las primeras clases
+
+***
+## Tests
+- Enlace para acceder a la descripición del [gestor de dependencias y a los tests que añadidos](docs/hitos/Hito_2.md).
+
+***
+## Docker
+- Enlace para acceder a la descripción del [diseño de un contenedor](./docs/hitos/Hito_3.md) con el que se puedan ejecutar los tests unitarios sobre la aplicación.
+***
+##
+
+## Integración Continua
 
 
-* [Contenedor Base](#contenedor)
-* [Docker Hub](#docker)
-* [GitHub Container Registry](#gitcontainer)
-
-<a name="contenedor"></a>
-### Contenedor Base
-
-El contenedor base empleado para el despliegue del proyecto ha sido el siguiente:
-```Dockerfile
-FROM julia:1.6
-```
-Para más información acerca del estudio realizado sobre otras opciones clicar [aquí](./Documentacion/extra/contenedor-base.md).
-
-<a name="docker"></a>
-### Docker Hub
-
-Se ha empleado para el almacenamiento del contenedor creado, permitiendo su descarga y despliegue en cualquier otra aplicación. 
-
-Siguiendo la estructura establecida por la [documentación de GitHub](https://docs.github.com/es/actions/publishing-packages/publishing-docker-images),
-hemos definido el workflow `push-docker&Git.yml` que se encargará de actualizar y publicar de manera automática en cada push a la rama principal `main` la imagen, tanto en Docker Hub como en el Registro del paquete de Github.  
-
-<a name="gitcontainer"></a>
-### GitHub Container Registry
-
-El Registro del paquete de GitHub nos permite alojar y administrar nuestras imágenes de contenedores de Docker en GitHub. Uno de los beneficios es que se podemos definir permisos para la imagen de Docker independientemente de los de cualquier repositorio. Esto quiere decir que nuestro repositorio podría ser privado y la imagen de Docker pública.
-
-Como hemos descrito en el apartado anterior, hemos definido el workflow de la publicación de la imágen en GitHub Container Registry junto con su publicación en Docker Hub.
-
-Para acceder a dicho archivo clicar [aquí](./.github/workflows/push-docker&Git.yml).
-
-Para más información acerca de diferentes registros públicos de contenedores clicar [aquí](./Documentacion/extra/registros-alternativos.md). 
-
-## Anteriores Hitos
+***
 
 La documentación relacionada con hitos anteriores se podrá consultar a través de los siguientes enlaces:
 
-* [Hito 0](./Documentacion/Hitos/Hito-0.md)
-* [Hito 1](./Documentacion/Hitos/Hito-1.md)
-* [Hito 2](./Documentacion/Hitos/Hito-2.md)
-* [Hito 3](./Documentacion/Hitos/Hito-3.md)
+* [Hito 0](docs/hitos/Hito_0.md)
+* [Hito 1](docs/hitos/Hito_1.md)
+* [Hito 2](docs/hitos/Hito_2.md)
+* [Hito 3](docs/hitos/Hito_3.md)
+
+## Licencia
+
+* [Licencia](./LICENSE)
