@@ -1,7 +1,9 @@
 entidad:
-  - src/leer_BasicInfo.jl
-  - src/leer_TrainInfo.jl
+  - src/leer_Partido.jl
+  - src/leer_Entrenamiento.jl
   - src/ForwardFootball.jl
+  - src/jugador.jl
+  - src/entrenador.jl
 lenguaje: julia
 test:
   - test/runtests.jl
