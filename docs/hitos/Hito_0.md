@@ -29,14 +29,16 @@ teniendo que realizar su limpieza y transformaciones pertinenetes para su almace
 
 El lenguaje de programación pensado para la esta resolución es el llamado Julia, aunque en caso de encontrar dificultades en el desarollo el lenguaje empleado será Python.
 
-### ¿ A quién beneficia?
+### ¿A quién beneficia?
 
 Esta herramienta beneficiaría tanto a un jugador del cual se conocen los datos, como a un entrenador de un equipo, como al manager de un club. Pero de manera más general beneficiaría a la industria del fútbol ya que esto supone una mejora inigualable a las técnicas realizadas previas a la incorporación de la metodología del Big Data.
 
 <a name="Additional"></a>
 ## Documentación Adicional
 
-En esta sección se muestra documentación adicional al proyecto que ha sido relevante para el desarrollo del mismo:
+En esta sección se muestra documentación adicional al proyecto que ha sido relevante para el desarrollo del mismo, y otros enlaces de interés:
 
-1. [Configuración de git](../Configuracion-Git.md)
+1. [Configuración de git](../extra/Configuracion-Git.md)
 2. [Licencia](../../LICENSE)
+3. [Hito 2](Hito_2.md)
+4. [Inicio](../../README.md)

@@ -1,12 +1,13 @@
 ## Hito 1
 
-Una vez conocido el proyecto a realizar (ver [Hito 0](./Hito-0.md)), se procederá a definir lo siguiente:
+Una vez conocido el proyecto a realizar (ver [Hito 0](Hito_0.md)), se procederemos a definir lo siguiente:
 
 
 * [Roles](#roles)
 * [Escenarios](#escenarios)
 * [Historias de usuario](#historias)
 * [Milestones](#milestones)
+* [Documentación Adicional](#documentación-adicional)
 
 
 <a name="roles"></a>
@@ -40,11 +41,11 @@ A continuación, se presentarán una serie de escenarios que puedan darse al usa
 
 A partir de la definición de los roles y una serie de escenarios posibles se extraen las historias de usuario:
 
-* [HU1 - Como jugador me gustaría conocer mi esfuerzo durante un partido](https://github.com/vntr-CC/Forward-Football/issues/3)
-* [HU2 - Como jugador quiero poder conocer mi esfuerzo durante un entrenamiento](https://github.com/vntr-CC/Forward-Football/issues/4)
-* [HU3 - Como jugador quiero poder comparar mi rendimiento con el resto de mis compañeros](https://github.com/vntr-CC/Forward-Football/issues/4)
-* [HU4 - Como entrenador me gustaría conocer el rendimiento de mis jugadores durante un partido](https://github.com/vntr-CC/Forward-Football/issues/5)
-* [HU5 - Como entrenador me gustaría conocer el rendimiento de mis jugadores durante un entrenamiento](https://github.com/vntr-CC/Forward-Football/issues/6)
+* [HU1 - Como jugador, para poder mejorar cada día, necesito conocer mi esfuerzo durante un partido sin tener que depender solamente del tiempo que me dedica el entrenador](https://github.com/vntr-CC/Forward-Football/issues/3)
+* [HU2 - Como jugador, para perfeccionar mis capacidades, necesito poder conocer mi esfuerzo durante un entrenamiento sin tener que depender solamente del tiempo que me dedica el entrenador](https://github.com/vntr-CC/Forward-Football/issues/4)
+* [HU3 - Como jugador, para ver mi mejora en el equipo, necesito poder comparar mi rendimiento con la media del equipo](https://github.com/vntr-CC/Forward-Football/issues/17)
+* [HU4 - Como entrenador, para mejorar mi equipo, necesito conocer el rendimiento de mis jugadores durante un partido sin tener que estar pendiente de todos ellos en todo momento](https://github.com/vntr-CC/Forward-Football/issues/5)
+* [HU5 - Como entrenador, para preparar mejor al equipo, necesito conocer el rendimiento de mis jugadores durante un entrenamiento sin tener que estar pendiente de todos ellos en todo momento](https://github.com/vntr-CC/Forward-Football/issues/6)
 
 A partir de estas historias de usuario, se crean las primeras tareas o issues:
 
@@ -69,3 +70,18 @@ Las historias de usuario y sus respectivas tareas será agrupadas en los siguien
 Para observar todos los milestomes añadidos posteriormente pulsar [aquí](https://github.com/vntr-CC/ForwardFootball/milestones).
 
 Dicho rendimiento viene definido por el tiempo entrenado, la frecuencia cardíaca por minuto, el cansancio físico, las calorías consumidas, la velocidad máxima lograda y la distancia cubierta.
+
+<a name="Additional"></a>
+## Documentación Adicional
+
+En esta sección se muestra documentación adicional al proyecto que ha sido relevante para el desarrollo del mismo, y otros enlaces de interés:
+
+- Enlace para acceder al archivo [cc.yaml](../../cc.yaml).
+- [Enlace](../../src/data/) para acceder a los archivos de donde se obtiene la información de los jugadores, tanto de un partido como del entrenamiento. 
+- Enlace para acceder a la entidad [lectura_BasicInfo](../../src/leer_Partido.jl) que se encarga de sustraer la información de los archivos de datos sobre un partido.
+- Enlace para acceder a la entidad [lectura_TrainInfo](../../src/leerTrainInfo.jl) que se encarga de sustraer la información de los archivos de datos sobre un entrenamiento.
+- Enlace para acceder a la entidad [jugador.jl](../../src/jugador.jl) que contiene las funciones necesarias para conocer el esfuerzo de un jugador.
+- Enlace para acceder a la entidad [entrenador.jl](../../src/entrenador.jl) que contiene las funciones necesarias para conocer el rendimiento de los jugadores de un equipo.
+- [Hito 0](Hito_0.md)
+- [Hito 2](Hito_2.md)
+- [Inicio](../../README.md)
