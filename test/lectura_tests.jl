@@ -4,7 +4,7 @@ using Test
 ## Conjunto de Tests sobre lectura
 
 @testset "Lectura de Datos sobre un Partido" begin
-    path = "../src/data/Info_Basica/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
+    path = "../src/data/Info_Partido/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
     @info "Testeo de la lectura de los datos sobre un partido"
     @test lectura_BasicInfo(path).match_id == "38986AF3-4EC0-4EE0-AD8F-7569BB343ADC"
     @test size(lectura_BasicInfo(path).basic_info) == (8, 2)
