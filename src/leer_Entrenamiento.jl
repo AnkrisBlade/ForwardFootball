@@ -53,3 +53,25 @@ function lectura_TrainInfo(path::String)
         rename!(df_train_bpm, column_names_bpm)
         push!(dfs_bpm, df_train_bpm)
     end
+
+    TrainInfo(train_id, df_train_info, team_id, df_train_team, df_train_player, dfs_physical, dfs_bpm)
+end
+
+function limpiar_TrainInfo(entrenamiento::TrainInfo)
+    physicals = entrenamiento.train_physical
+    physical_cleaned = Vector{DataFrame}()
+    for i in 1:length(physicals)
+        physical = select(physicals[i], ["id", "duration", "maxHR", "maxSpeed", "calories", "exerciseLoad", "distance"])
+        for col in eachcol(physical)
+            replace!(col, missing => 0)
+        end
+        push!(physical_cleaned, physical)
+    end
+
+    for i in 1:lastindex(physical_cleaned)
+        physical_cleaned[i][!, :id] = parse.(Int64, physical_cleaned[i][!, :id])
+        physical_cleaned[i][!, 2:end] = parse.(Float32, physical_cleaned[i][!, 2:end])
+    end
+    physical_cleaned
+
+end
