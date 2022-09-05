@@ -1,3 +1,6 @@
+using ForwardFootball
+using Test
+
 ## Conjunto de Tests sobre los roles
 
 @testset "Rendimiento de un equipo durante un Partido" begin
