@@ -14,15 +14,6 @@ git:
   depth: 99999999
 
 jobs:
-  # uncomment following lines to deploy documentation
-  # include:
-  #   - stage: "Documentation"
-  #     julia: 1.6
-  #     os: linux
-  #     script:
-  #       - julia --project=docs -e 'using Pkg; Pkg.instantiate(); Pkg.develop(PackageSpec(path=pwd()))'
-  #       - julia --project=docs --color=yes docs/make.jl
-  #     after_success: skip
   allow_failures:
     - julia: nightly
 after_success:

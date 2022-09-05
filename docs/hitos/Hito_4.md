@@ -1,2 +1,10 @@
-Para realizar esta cometido en el lenguaje de programación Julia haremos uso del servicio de Integración Contínua de **Travis CI**. Donde primeramente comprobará la integración del proyecto ejecutando los tests y posteriormente inicializará los pasos necesarios para su compilación y generación de la documentación.
-Para ver otras opciones haga clic [aquí](../extra/integracion_continua.md).
+## Hito 4
+
+- Enlace para acceder al [estudio y elección del sistema de CI](../extra/integracion_continua.md) elegido (Travis, Circle-CI, GitHub Actions, ...).
+- Enlace al archivo de [configuración de Travis CI](../../.travis.yml).
+- Enlace al archivo de [configuración Circle-CI](../../.circleci/config.yml).
+- Enlace al archivo de [configuración de GitHub Actions con codecov](../../.github/workflows/CI.yml).
+- Enlace al archivo de [configuración del GitHub Action (Docker)](../../.github/workflows/push-docker%26Git.yml).
+- [Hito 3](../hitos/Hito_3.md)
+- [Hito 5](../hitos/Hito_5.md)
+- [Inicio](../../README.md)

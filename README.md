@@ -30,27 +30,23 @@ El lenguaje de programación pensado para la esta resolución es el llamado Juli
 Esta herramienta beneficiaría tanto a un jugador del cual se conocen los datos, como a un entrenador de un equipo, como al manager de un club. Pero de manera más general beneficiaría a la industria del fútbol ya que esto supone una mejora inigualable a las técnicas realizadas previas a la incorporación de la metodología del Big Data.
 
 ***
-
-## Creación y configuración del repositorio
+## Creación y configuración del repositorio 💻
 - [Enlace](docs/hitos/Hito_0.md) referente a la problemática a resolver, y la configuración del repositorio.
 
 ***
-
-## Planificación del proyecto
+## Planificación del proyecto 💭
 - Enlace para acceder a la planificación inicial del proyecto, las _historias de usuario_ que describen los roles descritos en el [Hito 1](docs/hitos/Hito_1.md) la creación de las primeras clases
 
 ***
-## Tests
+## Tests ✅
 - Enlace para acceder a la descripición del [gestor de dependencias y a los tests que añadidos](docs/hitos/Hito_2.md).
 
 ***
-## Docker
+## Docker 🐋
 - Enlace para acceder a la descripción del [diseño de un contenedor](./docs/hitos/Hito_3.md) con el que se puedan ejecutar los tests unitarios sobre la aplicación.
 ***
-##
-
-## Integración Continua
-
+## Integración Continua 🔄
+- Enlace para acceder a la documentación relacionada con el [estudio y elección de un sistema de CI](./docs/hitos/Hito_4.md).
 
 ***
 
@@ -60,6 +56,7 @@ La documentación relacionada con hitos anteriores se podrá consultar a través
 * [Hito 1](docs/hitos/Hito_1.md)
 * [Hito 2](docs/hitos/Hito_2.md)
 * [Hito 3](docs/hitos/Hito_3.md)
+* [Hito 4](docs/hitos/Hito_4.md)
 
 ## Licencia
 
