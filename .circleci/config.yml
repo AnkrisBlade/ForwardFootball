@@ -1,0 +1,10 @@
+version: 1
+jobs:
+  build:
+    docker:
+      - image: vntrcc/forwardfootball
+    steps:
+      - checkout
+      - run:
+          name: Running container
+          command: julia make.jl
