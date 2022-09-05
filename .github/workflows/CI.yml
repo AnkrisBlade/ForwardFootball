@@ -43,14 +43,14 @@ jobs:
           file: lcov.info
   
   coverage:
-   name: Ejecutar coverage
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v2
+    name: Ejecutar coverage
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out the repo
+          uses: actions/checkout@v2
 
-      - name: Instalar dependencias
-        run: julia-actions/julia-buildpkg@v1
+        - name: Instalar dependencias
+          run: julia-actions/julia-buildpkg@v1
 
-      - name: Run coverage tests
-        run: julia-actions/julia-runtest@v1:coverage
+        - name: Run coverage tests
+          run: julia-actions/julia-runtest@v1
