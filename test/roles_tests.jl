@@ -4,7 +4,7 @@ using Test
 ## Conjunto de Tests sobre los roles
 
 @testset "Rendimiento de un equipo durante un Partido" begin
-    path = "../src/data/Info_Basica/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
+    path = "../src/data/Info_Partido/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
     @info "Testeando el rendimiento de un Equipo durante un partido"
     @test rendimiento_partido(path)[!, 1] == [94822, 94825, 94816, 94828, 94824]
     @test rendimiento_partido(path)[!, 2] ≈ [911.0, 946.0, 946.0, 946.0, 946.0]
@@ -36,7 +36,7 @@ end
 end
 
 @testset "Esfuerzo de un Jugador durante un Partido" begin
-    path = "../src/data/Info_Basica/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
+    path = "../src/data/Info_Partido/Orange Lions V20-2 vs Orange Lions V20-1/The data report of Orange Lions V20-120200122.xlsx"
     @info "Testeando el esfuerzo de un Jugador durante un partido"
     @test esfuerzo_partido(path, 94828).max_HR ≈ 186
     @test esfuerzo_partido(path, 94828).vel_max ≈ 6.4
