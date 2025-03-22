@@ -12,7 +12,7 @@ Sistema de análisis del rendimiento de jugadores de fútbol en base a distintas
 
 ***
 
-![ForwardFooball](docs/imgs/forward_football.png)
+<img src="docs/imgs/ff.jpeg" alt="ForwardFooball" width="60%">
 
 ## Descripción del problema
 
